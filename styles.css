@@ -1,0 +1,62 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #f3f3f3;
+}
+header {
+    background-color: #e62117;
+    padding: 20px 0;
+    color: #fff;
+    font-size: 24px;
+}
+section {
+    padding: 20px;
+    margin-top: 20px;
+}
+#authorizedContent {
+    display: none;
+}
+.button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+.pokemon-container {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+.pokemon {
+    margin: 0 10px;
+    cursor: pointer;
+}
+.pokemon-image {
+    width: 120px;
+    height: auto;
+    border-radius: 5px;
+}
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border: 2px solid #007bff;
+    border-radius: 10px;
+    z-index: 999;
+}
+.congratulatory-message {
+    background-color: #f8d030;
+    padding: 20px;
+    border: 2px solid #ffd700;
+    border-radius: 10px;
+    margin-top: 20px;
+}

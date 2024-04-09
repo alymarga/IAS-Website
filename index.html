@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pokemon Website</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        Pokemon Training Center
+    </header>
+    <section>
+        <div id="authorization">
+            <h2>Enter Trainer's Code</h2>
+            <input type="password" id="trainerCode" placeholder="Trainer's code">
+            <button class="button" onclick="authorize()">Authorize</button>
+        </div>
+        <div id="authorizedContent">
+            <h2>Welcome, Trainer!</h2>
+            <p>Choose your starter Pokémon:</p>
+            <div class="pokemon-container">
+                <div class="pokemon" onclick="showDetails('Squirtle')">
+                    <img src="squirtle.png" alt="Squirtle" class="pokemon-image">
+                </div>
+                <div class="pokemon" onclick="showDetails('Charmander')">
+                    <img src="charmander.png" alt="Charmander" class="pokemon-image">
+                </div>
+                <div class="pokemon" onclick="showDetails('Torchic')">
+                    <img src="torchic.png" alt="Torchic" class="pokemon-image">
+                </div>
+                <div class="pokemon" onclick="showDetails('Bulbasaur')">
+                    <img src="bulbasaur.png" alt="Bulbasaur" class="pokemon-image">
+                </div>
+            </div>
+            <div id="popup" class="popup"></div>
+        </div>
+        <div id="congratulatoryMessage" class="congratulatory-message" style="display: none;">
+            <p>Congratulations, Trainer!</p>
+            <p>You may now start your journey as a Pokémon Trainer. Enjoy and collect Pokémon!</p>
+            <img src="" alt="Starter Pokémon" id="starterPokemon" class="pokemon-image">
+            <p id="starterPokemonName"></p>
+            <p>Your Starter Pokémon</p>
+        </div>
+    </section>
+    <section id="unauthorizedContent" style="display:none;">
+        <h2>Access Denied!</h2>
+        <p>Sorry, access to this content is restricted to authorized trainers only.</p>
+        <p>If you'd like to access exclusive features, please join our Pokémon Gym and enter the trainer's code.</p>
+        <img src="pokemon.png" alt="Pokemon" class="pokemon-image">
+    </section>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
