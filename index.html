@@ -8,11 +8,11 @@
 </head>
 <body>
     <header>
-        Pokemon Training Center
+        <img src="pokemon_name.png" alt="Pokemon Name" class="pokemon-name">
     </header>
     <section>
         <div id="authorization">
-            <h2>Enter Trainer's Code</h2>
+            <h2>Ready to take the first step towards becoming a Pokémon Master? <br> Enter your Trainer's Code and let the adventure begin!</h2>
             <input type="password" id="trainerCode" placeholder="Trainer's code">
             <button class="button" onclick="authorize()">Authorize</button>
         </div>
@@ -20,34 +20,45 @@
             <h2>Welcome, Trainer!</h2>
             <p>Choose your starter Pokémon:</p>
             <div class="pokemon-container">
-                <div class="pokemon" onclick="showDetails('Squirtle')">
+                <div class="pokemon-card" onclick="showDetails('Squirtle')">
                     <img src="squirtle.png" alt="Squirtle" class="pokemon-image">
                 </div>
-                <div class="pokemon" onclick="showDetails('Charmander')">
+                <div class="pokemon-card" onclick="showDetails('Charmander')">
                     <img src="charmander.png" alt="Charmander" class="pokemon-image">
                 </div>
-                <div class="pokemon" onclick="showDetails('Torchic')">
+                <div class="pokemon-card" onclick="showDetails('Torchic')">
                     <img src="torchic.png" alt="Torchic" class="pokemon-image">
                 </div>
-                <div class="pokemon" onclick="showDetails('Bulbasaur')">
+                <div class="pokemon-card" onclick="showDetails('Bulbasaur')">
                     <img src="bulbasaur.png" alt="Bulbasaur" class="pokemon-image">
                 </div>
             </div>
             <div id="popup" class="popup"></div>
         </div>
+        <div id="popupBox" class="popup-box" style="display: none;">
+            <h2>Access Denied!</h2>
+            <p>Sorry, access to this content is restricted to authorized trainers only.</p>
+            <p>Don't give up! Seek out your Pokémon Professor to obtain your Trainer's Code and kickstart your quest to become a Pokémon Master!</p>
+            <img src="pokemon-ash.gif" alt="Pokemon" class="pokemon-image">
+            <br> <button onclick="closePopup()">Close</button>
+        </div>
         <div id="congratulatoryMessage" class="congratulatory-message" style="display: none;">
-            <p>Congratulations, Trainer!</p>
-            <p>You may now start your journey as a Pokémon Trainer. Enjoy and collect Pokémon!</p>
-            <img src="" alt="Starter Pokémon" id="starterPokemon" class="pokemon-image">
-            <p id="starterPokemonName"></p>
-            <p>Your Starter Pokémon</p>
+            <p>Excellent choice! Your Pokémon will be your loyal companion on your journey. </p>
+            <p>Along with your chosen Pokémon, take these gifts as well. </p>
+            <button onclick="receiveGift()">Receive</button> 
+        </div>
+        <div id="pokeballPopup" class="popup-box" style="display: none;">
+            <h2>Congratulations, Trainer!</h2>
+            <img src="pokeballs.jpg" alt="Pokeball" class="pokemon-image">
+            <p>These are Poké Balls. They will allow you to capture more Pokémon and expand your team as you explore the vast world ahead.</p>
+            <p>Remember, the Pokémon world is filled with wonders waiting to be discovered. Treat your Pokémon with care, and they'll be your loyal companions on this thrilling journey!</p>
+            <p>Good luck, Trainer! Your Pokémon adventure awaits!</p></p>
+            <button onclick="closePokeballPopup()">Close</button>
         </div>
     </section>
     <section id="unauthorizedContent" style="display:none;">
-        <h2>Access Denied!</h2>
-        <p>Sorry, access to this content is restricted to authorized trainers only.</p>
-        <p>If you'd like to access exclusive features, please join our Pokémon Gym and enter the trainer's code.</p>
-        <img src="pokemon.png" alt="Pokemon" class="pokemon-image">
+        <button onclick="displayAccessDeniedPopup()">Access Denied</button>
+
     </section>
 
     <script src="scripts.js"></script>
