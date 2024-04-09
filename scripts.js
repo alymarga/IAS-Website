@@ -7,22 +7,23 @@ function authorize() {
         document.getElementById("authorizedContent").style.display = "block";
         document.getElementById("unauthorizedContent").style.display = "none";
     } else {
-        document.getElementById("unauthorizedContent").style.display = "block";
+        document.getElementById("popupBox").style.display = "block";
     }
 }
 
 function showDetails(pokemon) {
     var popupContent = "<img src='" + pokemon.toLowerCase() + ".png' alt='" + pokemon + "' class='pokemon-image'>";
-    popupContent += "<p>You've chosen " + pokemon + " as your starter Pokémon!</p>";
-    popupContent += "<p>Type(s): " + getTypes(pokemon).join(", ") + "</p>";
+    popupContent += "<p>Would you like to choose " + pokemon + " as your starter Pokémon?</p>";
+    popupContent += "<p>Type: " + getTypes(pokemon).join(", ") + "</p>";
     popupContent += "<p>Abilities: " + getAbilities(pokemon).join(", ") + "</p>";
-    popupContent += "<button class='button' onclick='closePopup(); showCongrats(\"" + pokemon + "\")'>Pick</button>";
+    popupContent += "<button class='button' onclick='closePopup(); showCongrats(\"" + pokemon + "\")'>I choose you!</button>";
     document.getElementById("popup").innerHTML = popupContent;
     document.getElementById("popup").style.display = "block";
 }
 
 function closePopup() {
     document.getElementById("popup").style.display = "none";
+    document.getElementById("popupBox").style.display = "none";
 }
 
 function showCongrats(pokemon) {
@@ -30,6 +31,14 @@ function showCongrats(pokemon) {
     document.getElementById("starterPokemon").src = pokemon.toLowerCase() + ".png";
     document.getElementById("starterPokemon").alt = pokemon;
     document.getElementById("starterPokemonName").innerText = pokemon;
+}
+
+function receiveGift() {
+    document.getElementById("pokeballPopup").style.display = "block";
+}
+
+function closePokeballPopup() {
+    document.getElementById("pokeballPopup").style.display = "none";
 }
 
 function getTypes(pokemon) {
