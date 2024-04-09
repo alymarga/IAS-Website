@@ -39,7 +39,7 @@ section {
     flex: 0 0 120px; 
 }
 .pokemon-image {
-    width: 100%;
+    width: 120px;
     height: auto;
     border-radius: 5px;
 }
