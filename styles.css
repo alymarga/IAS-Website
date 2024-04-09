@@ -20,7 +20,7 @@ section {
 }
 .button {
     padding: 10px 20px;
-    background-color: #007bff;
+    background-color: #e62117;
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -36,11 +36,30 @@ section {
     margin: 0 10px;
     cursor: pointer;
 }
+
+.pokemon-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: #f9f9f9;
+    cursor: pointer;
+    display: inline-block;
+}
+
 .pokemon-image {
     width: 120px;
     height: auto;
     border-radius: 5px;
 }
+
+.pokemon-name {
+    width: 150px;
+    height: auto; 
+}
+
 .popup {
     display: none;
     position: fixed;
@@ -49,10 +68,28 @@ section {
     transform: translate(-50%, -50%);
     background-color: white;
     padding: 20px;
-    border: 2px solid #007bff;
+    border: 2px solid #e62117;
     border-radius: 10px;
     z-index: 999;
 }
+
+.popup-box {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    padding: 20px;
+    border: 2px solid #000;
+    box-shadow: 0 0 10px rgba(238, 7, 7, 0.963);
+    z-index: 9999;
+}
+
+.popup-box h2 {
+    margin-top: 0;
+}
+
 .congratulatory-message {
     background-color: #f8d030;
     padding: 20px;
